@@ -53,9 +53,13 @@ def on_chat_start():
         "max_tokens": 8192
     }
 
-    agent = MovieAgent(
-        litellm_model=MODEL_ANTHROPIC_CLAUDE,
-        model_kwargs=model_kwargs
+    # agent = MovieAgent(
+    #     litellm_model=MODEL_ANTHROPIC_CLAUDE,
+    #     model_kwargs=model_kwargs
+    # )
+    agent = PlanningAgent(
+         litellm_model=MODEL_ANTHROPIC_CLAUDE,
+         model_kwargs=model_kwargs
     )
     cl.user_session.set("agent", agent)
 
