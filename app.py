@@ -1,6 +1,7 @@
 from dotenv import load_dotenv
 import chainlit as cl
 import litellm
+from agents.implementation_agent import ImplementationAgent
 from agents.planning_agent import PlanningAgent
 from agents.movie_agent import MovieAgent
 from langsmith import traceable
@@ -15,6 +16,8 @@ litellm.success_callback = ["langsmith"]
 MODEL_OPENAI_GPT4 = "openai/gpt-4o"
 MODEL_ANTHROPIC_CLAUDE = "anthropic/claude-3-5-sonnet-latest"
 MODEL_FIREWORKS_QWEN = "fireworks/qwen1.5-72b-chat"
+
+AGENT_CLS = ImplementationAgent
 
 async def on_tag_start(tag_name: str, stream: AsyncGenerator[str, None]):
     # Create a parent message first
@@ -53,11 +56,7 @@ def on_chat_start():
         "max_tokens": 8192
     }
 
-    # agent = MovieAgent(
-    #     litellm_model=MODEL_ANTHROPIC_CLAUDE,
-    #     model_kwargs=model_kwargs
-    # )
-    agent = PlanningAgent(
+    agent = AGENT_CLS(
          litellm_model=MODEL_ANTHROPIC_CLAUDE,
          model_kwargs=model_kwargs
     )
