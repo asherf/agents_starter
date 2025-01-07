@@ -69,7 +69,7 @@ YOU MUST FOLLOW THIS EXACT STRUCTURE IN YOUR RESPONSE:
 
 Based on your review, create the final, polished plan in markdown format as a JSON string incorporating 
 ALL the improvements you identified in the review section. The final plan should include ALL the content in the draft
-with the revisions that the review section recommended. Incomplete plans are not accceptable.
+with the revisions that the review section recommended. Incomplete plans are not acceptable.
 This is what will be saved as plan.md. When calling the updateArtifact function, make sure the contents are formatted
 as a JSON string.
 
