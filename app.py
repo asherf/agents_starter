@@ -17,7 +17,7 @@ MODEL_OPENAI_GPT4 = "openai/gpt-4o"
 MODEL_ANTHROPIC_CLAUDE = "anthropic/claude-3-5-sonnet-latest"
 MODEL_FIREWORKS_QWEN = "fireworks/qwen1.5-72b-chat"
 
-AGENT_CLS = ImplementationAgent
+AGENT_CLS = PlanningAgent
 
 async def on_tag_start(tag_name: str, stream: AsyncGenerator[str, None]):
     # Create a parent message first

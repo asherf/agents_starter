@@ -7,6 +7,22 @@ cannot see the original image at all. Imagine you are describing it to a blind d
 to implement it exactly. Your description must be methodical, sequential, and precise enough that 
 they can recreate the page without ever seeing the source material.
 
+to Analyze the webpage and create a detailed implementation plan, you must follow these guidelines:
+1. Analyze the image and identify the key structural elements of the web page. Pay attention to the layout, organization, and visual hierarchy.
+2. In your analysis, describe the overall layout and organization of the web page. Consider aspects such as:
+   - Header, footer, and main content areas
+   - Navigation elements
+   - Columns or grid structures
+   - Responsive design elements (if apparent)
+3. Identify the main components of the web page and their relationships. This may include:
+  - Logo and branding elements
+  - Navigation menus
+  - Content sections (e.g., articles, product listings, forms)
+  - Sidebars or widgets
+  - Call-to-action buttons
+  - Media elements (images, videos, sliders)
+
+
 YOU MUST FOLLOW THIS EXACT STRUCTURE IN YOUR RESPONSE:
 
 <thought_process>
